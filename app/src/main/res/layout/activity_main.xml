@@ -49,24 +49,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:text="Custom Alert Dialogue:"
+            android:text="Custom Button:"
             android:textSize="24sp"
             android:textColor="@color/white"/>
 
         <stream.custombutton.CustomButton
-            style="@style/CustomButtonStyle"
             android:id="@+id/btn1"
-            android:text="Single Select"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Button 1"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="none"
+            app:btn_cornerRadius="20dp"
+            app:btn_strokeWidth="1dp"
+            app:btn_strokeColor="#FFFFFF"
+            app:btn_unpressColor="@color/transparent"
+            app:btn_pressColor="@color/transparent"
+            app:btn_text_unpressColor="#FFFFFF"
+            app:btn_text_pressColor="#FFFFFF"/>
 
         <stream.custombutton.CustomButton
-            style="@style/CustomButtonStyle"
             android:id="@+id/btn2"
-            android:text="Multi Select"/>
-
-        <stream.custombutton.CustomButton
-            style="@style/CustomButtonStyle"
-            android:id="@+id/btn3"
-            android:text="Photo Preview"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Button 2"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="none"
+            app:btn_cornerRadius="20dp"
+            app:btn_strokeWidth="1dp"
+            app:btn_strokeColor="#008af9"
+            app:btn_unpressColor="@color/transparent"
+            app:btn_pressColor="#008af9"
+            app:btn_text_unpressColor="#008af9"
+            app:btn_text_pressColor="@color/white"/>
     </LinearLayout>
 </FrameLayout>

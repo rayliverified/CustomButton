@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Image Preview Select - Clicking on image opens Image Preview. Must click select icon to select image.
-        CustomButton btn3 = (CustomButton) findViewById(R.id.btn3);
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
+//        CustomButton btn3 = (CustomButton) findViewById(R.id.btn3);
+//        btn3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//            }
+//        });
     }
 }
