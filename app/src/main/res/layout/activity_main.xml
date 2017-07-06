@@ -66,6 +66,23 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
+            android:text="Button Default"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="none"/>
+
+        <stream.custombutton.CustomButton
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
             android:text="Button 1"
             android:textSize="18sp"
             android:maxLines="1"
@@ -73,14 +90,15 @@
             android:ellipsize="none"
             app:btn_cornerRadius="20dp"
             app:btn_strokeWidth="1dp"
-            app:btn_strokeColor="#FFFFFF"
-            app:btn_unpressColor="@color/transparent"
-            app:btn_pressColor="@color/transparent"
-            app:btn_text_unpressColor="#FFFFFF"
-            app:btn_text_pressColor="#FFFFFF"/>
+            app:btn_strokeColor="@color/white"
+            app:btn_strokeSelectColor="@color/white_pressed"
+            app:btn_buttonColor="@color/transparent"
+            app:btn_buttonSelectColor="@color/transparent"
+            app:btn_textColor="@color/white"
+            app:btn_textSelectColor="@color/white_pressed"/>
 
         <stream.custombutton.CustomButton
-            android:id="@+id/btn2"
+            android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="6dp"
@@ -98,9 +116,9 @@
             app:btn_cornerRadius="20dp"
             app:btn_strokeWidth="1dp"
             app:btn_strokeColor="#008af9"
-            app:btn_unpressColor="@color/transparent"
-            app:btn_pressColor="#008af9"
-            app:btn_text_unpressColor="#008af9"
-            app:btn_text_pressColor="@color/white"/>
+            app:btn_buttonColor="@color/transparent"
+            app:btn_buttonSelectColor="#008af9"
+            app:btn_textColor="#008af9"
+            app:btn_textSelectColor="@color/white"/>
     </LinearLayout>
 </FrameLayout>

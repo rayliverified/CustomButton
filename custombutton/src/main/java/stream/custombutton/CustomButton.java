@@ -18,16 +18,15 @@ import android.view.View;
 
 public class CustomButton extends android.support.v7.widget.AppCompatTextView {
     private GradientDrawable gradientDrawable;
-    private int mUnPressColor;
-    private int mPressColor;
+    private int mButtonSelectColor;
+    private int mButtonColor;
     private int mStrokeColor;
-    private int mStrokeWidth = 2;
-    private int mCornerRadius = 12;
+    private int mStrokeSelectColor;
+    private int textColor;
+    private int textSelectColor;
+    private int mStrokeWidth;
+    private int mCornerRadius;
     private Resources resources;
-    private int defaultStrokeWidth = 2;
-    private int defaultCornerRadius = 12;
-    private int textUnPressColor;
-    private int textPressColor;
     private int showDrawable;
     private Drawable drawable;
 
@@ -57,15 +56,16 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         }
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomButton, defStyleAttr, defStyleRes);
-        textUnPressColor = typedArray.getColor(R.styleable.CustomButton_btn_text_unpressColor, Color.GRAY);
-        textPressColor = typedArray.getColor(R.styleable.CustomButton_btn_text_pressColor, Color.WHITE);
-        mUnPressColor = typedArray.getColor(R.styleable.CustomButton_btn_unpressColor, Color.WHITE);
-        mPressColor = typedArray.getColor(R.styleable.CustomButton_btn_pressColor, Color.GRAY);
+        textColor = typedArray.getColor(R.styleable.CustomButton_btn_textColor, Color.GRAY);
+        textSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_textSelectColor, Color.WHITE);
+        mButtonColor = typedArray.getColor(R.styleable.CustomButton_btn_buttonColor, Color.WHITE);
+        mButtonSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_buttonSelectColor, Color.GRAY);
         mStrokeColor = typedArray.getColor(R.styleable.CustomButton_btn_strokeColor, Color.GRAY);
-        mStrokeWidth = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_strokeWidth, defaultStrokeWidth);
-        mCornerRadius = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_cornerRadius, defaultCornerRadius);
+        mStrokeSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_strokeSelectColor, Color.GRAY);
+        mStrokeWidth = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_strokeWidth, 2);
+        mCornerRadius = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_cornerRadius, 40);
         gradientDrawable.setShape(GradientDrawable.RECTANGLE);
-        gradientDrawable.setColor(mUnPressColor);
+        gradientDrawable.setColor(mButtonColor);
         gradientDrawable.setStroke(mStrokeWidth, mStrokeColor, 0, 0);
         gradientDrawable.setCornerRadius(mCornerRadius);
 
@@ -73,19 +73,19 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         typedArray.recycle();
 
         setGravity(Gravity.CENTER);
-        setTextColor(textUnPressColor);
+        setTextColor(textColor);
 
         setOnTouchListener(new OnButtonTouchListener());
     }
 
     private void setButtonBackgroud() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             setBackground(gradientDrawable);
         else
             setBackgroundDrawable(gradientDrawable);
     }
 
-    class OnButtonTouchListener implements OnTouchListener {
+    private class OnButtonTouchListener implements OnTouchListener {
 
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -105,11 +105,13 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
 
     public void setPressStatus(boolean isPress) {
         if (isPress) {
-            setTextColor(textPressColor);
-            gradientDrawable.setColor(mPressColor);
+            setTextColor(textSelectColor);
+            gradientDrawable.setColor(mButtonSelectColor);
+            gradientDrawable.setStroke(mStrokeWidth, mStrokeSelectColor);
         } else {
-            setTextColor(textUnPressColor);
-            gradientDrawable.setColor(mUnPressColor);
+            setTextColor(textColor);
+            gradientDrawable.setColor(mButtonColor);
+            gradientDrawable.setStroke(mStrokeWidth, mStrokeColor);
         }
         setButtonBackgroud();
     }
@@ -117,11 +119,13 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
 
     public void setButtonStatus(boolean isEnable) {
         if (isEnable) {
-            setTextColor(textPressColor);
-            gradientDrawable.setColor(mPressColor);
+            setTextColor(textSelectColor);
+            gradientDrawable.setColor(mButtonSelectColor);
+            gradientDrawable.setStroke(mStrokeWidth, mStrokeSelectColor);
         } else {
-            setTextColor(textUnPressColor);
-            gradientDrawable.setColor(mUnPressColor);
+            setTextColor(textColor);
+            gradientDrawable.setColor(mButtonColor);
+            gradientDrawable.setStroke(mStrokeWidth, mStrokeColor);
         }
 
         setButtonBackgroud();
@@ -170,17 +174,17 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
 
     public void setColor(int textnormal, int textpressed, int buttonunpressed, int buttonpressed, int stroke)
     {
-        textUnPressColor = textnormal;
-        textPressColor = textpressed;
-        mUnPressColor = buttonunpressed;
-        mPressColor = buttonpressed;
+        textColor = textnormal;
+        textSelectColor = textpressed;
+        mButtonColor = buttonunpressed;
+        mButtonSelectColor = buttonpressed;
         mStrokeColor = stroke;
         gradientDrawable.setShape(GradientDrawable.RECTANGLE);
-        gradientDrawable.setColor(mUnPressColor);
+        gradientDrawable.setColor(mButtonColor);
         gradientDrawable.setStroke(mStrokeWidth, mStrokeColor, 0, 0);
         gradientDrawable.setCornerRadius(mCornerRadius);
         setButtonBackgroud();
-        setTextColor(textUnPressColor);
+        setTextColor(textColor);
     }
 
     /**
