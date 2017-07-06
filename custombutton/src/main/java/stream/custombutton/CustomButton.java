@@ -57,11 +57,11 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomButton, defStyleAttr, defStyleRes);
         textColor = typedArray.getColor(R.styleable.CustomButton_btn_textColor, Color.GRAY);
-        textSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_textSelectColor, Color.WHITE);
+        textSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_textSelectColor, textColor);
         mButtonColor = typedArray.getColor(R.styleable.CustomButton_btn_buttonColor, Color.WHITE);
-        mButtonSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_buttonSelectColor, Color.GRAY);
+        mButtonSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_buttonSelectColor, mButtonColor);
         mStrokeColor = typedArray.getColor(R.styleable.CustomButton_btn_strokeColor, Color.GRAY);
-        mStrokeSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_strokeSelectColor, Color.GRAY);
+        mStrokeSelectColor = typedArray.getColor(R.styleable.CustomButton_btn_strokeSelectColor, mStrokeColor);
         mStrokeWidth = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_strokeWidth, 2);
         mCornerRadius = typedArray.getDimensionPixelSize(R.styleable.CustomButton_btn_cornerRadius, 40);
         gradientDrawable.setShape(GradientDrawable.RECTANGLE);

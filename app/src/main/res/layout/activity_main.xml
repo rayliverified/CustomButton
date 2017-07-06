@@ -93,7 +93,6 @@
             app:btn_strokeColor="@color/white"
             app:btn_strokeSelectColor="@color/white_pressed"
             app:btn_buttonColor="@color/transparent"
-            app:btn_buttonSelectColor="@color/transparent"
             app:btn_textColor="@color/white"
             app:btn_textSelectColor="@color/white_pressed"/>
 
