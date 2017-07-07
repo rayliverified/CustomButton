@@ -12,25 +12,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CustomButton btn1 = (CustomButton) findViewById(R.id.btn1);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
             }
-        });
+        };
+
+        CustomButton btn1 = (CustomButton) findViewById(R.id.btn1);
+        btn1.setOnClickListener(onClickListener);
 
         CustomButton btn2 = (CustomButton) findViewById(R.id.btn2);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
+        btn2.setOnClickListener(onClickListener);
 
         CustomButton btn3 = (CustomButton) findViewById(R.id.btn3);
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
+        btn3.setOnClickListener(onClickListener);
+
+        CustomButton btn4 = (CustomButton) findViewById(R.id.btn4);
+        btn4.setOnClickListener(onClickListener);
+
+        CustomButton btn5 = (CustomButton) findViewById(R.id.btn5);
+        btn5.setOnClickListener(onClickListener);
     }
 }
