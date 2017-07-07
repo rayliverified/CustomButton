@@ -8,15 +8,19 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class CustomButton extends android.support.v7.widget.AppCompatTextView {
+
+    private String mText;
     private GradientDrawable gradientDrawable;
     private int mButtonSelectColor;
     private int mButtonColor;
@@ -29,14 +33,14 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
     private Resources resources;
     private int showDrawable;
     private Drawable drawable;
-
+    private Context mContext;
 
     public CustomButton(Context context) {
-        this(context,null,0,0);
+        this(context, null, 0, 0);
     }
 
     public CustomButton(Context context, AttributeSet attrs) {
-        this(context,attrs, 0,0);
+        this(context, attrs, 0, 0);
     }
 
     public CustomButton(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -46,14 +50,24 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public CustomButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs,defStyleAttr,defStyleRes);
+        init(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    private void init(Context context, AttributeSet attrs,int defStyleAttr, int defStyleRes) {
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+
+        mContext = context;
+
         resources = getResources();
         if (gradientDrawable == null) {
             gradientDrawable = new GradientDrawable();
         }
+
+        int[] set = {
+                android.R.attr.text
+        };
+        TypedArray a = context.obtainStyledAttributes(attrs, set);
+        mText = String.valueOf(a.getText(0));
+        a.recycle();
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomButton, defStyleAttr, defStyleRes);
         textColor = typedArray.getColor(R.styleable.CustomButton_btn_textColor, Color.GRAY);
@@ -69,7 +83,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         gradientDrawable.setStroke(mStrokeWidth, mStrokeColor, 0, 0);
         gradientDrawable.setCornerRadius(mCornerRadius);
 
-        setButtonBackgroud();
+        setButtonBackground();
         typedArray.recycle();
 
         setGravity(Gravity.CENTER);
@@ -78,7 +92,13 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         setOnTouchListener(new OnButtonTouchListener());
     }
 
-    private void setButtonBackgroud() {
+    private void setText(String text)
+    {
+        mText = text;
+        super.setText(text);
+    }
+
+    private void setButtonBackground() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             setBackground(gradientDrawable);
         else
@@ -113,7 +133,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
             gradientDrawable.setColor(mButtonColor);
             gradientDrawable.setStroke(mStrokeWidth, mStrokeColor);
         }
-        setButtonBackgroud();
+        setButtonBackground();
     }
 
 
@@ -128,62 +148,55 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
             gradientDrawable.setStroke(mStrokeWidth, mStrokeColor);
         }
 
-        setButtonBackgroud();
+        setButtonBackground();
     }
 
-    public void setDrawableRightText(int text, int imgResId) {
-        setDrawableRightText(resources.getString(text), imgResId);
+    public void setDrawableLeft(int imgResId) {
+        setDrawableLeft(imgResId, getLineHeight(), getLineHeight());
     }
 
-    public void setDrawableRightText(CharSequence text, int imgResId) {
-        Drawable drawable = resources.getDrawable(imgResId);
-        setDrawableRightText(text, drawable);
-    }
-
-    public void setDrawableRightText(CharSequence text, Drawable drawable) {
+    public void setDrawableLeft(int imgResId, int width, int height){
+        String originalText = mText;
         setText("");
         SpannableString ss = new SpannableString("pics");
-
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
-        ss.setSpan(span, 0, ss.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-        append(text);
-        append(" ");
-        append(ss);
-    }
-
-    public void setDrawableLeftText(int text, int imgResId) {
-        setDrawableLeftText(resources.getString(text), imgResId);
-    }
-
-    public void setDrawableLeftText(CharSequence text, int imgResId) {
-        Drawable drawable = resources.getDrawable(imgResId);
-        setDrawableLeftText(text,drawable);
-    }
-
-    public void setDrawableLeftText(CharSequence text, Drawable drawable){
-        setText("");
-        SpannableString ss = new SpannableString("pics");
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
+        Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
+        drawable.setBounds(0, 0, width, height);
+        ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
         ss.setSpan(span, 0, ss.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         append(ss);
         append(" ");
-        append(text);
+        append(originalText);
+        mText = originalText;
     }
 
-    public void setColor(int textnormal, int textpressed, int buttonunpressed, int buttonpressed, int stroke)
+    public void setDrawableRight(int imgResId) {
+        setDrawableRight(imgResId, getLineHeight(), getLineHeight());
+    }
+
+    public void setDrawableRight(int imgResId, int width, int height) {
+        SpannableString ss = new SpannableString("pics");
+        Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
+        drawable.setBounds(0, 0, width, height);
+        ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
+        ss.setSpan(span, 0, ss.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+        setText(mText + " ");
+        append(ss);
+    }
+
+
+    public void setColor(int textnormal, int textselected, int buttonnormal, int buttonselected, int strokenormal, int strokeselected)
     {
         textColor = textnormal;
-        textSelectColor = textpressed;
-        mButtonColor = buttonunpressed;
-        mButtonSelectColor = buttonpressed;
-        mStrokeColor = stroke;
+        textSelectColor = textselected;
+        mButtonColor = buttonnormal;
+        mButtonSelectColor = buttonselected;
+        mStrokeColor = strokenormal;
+        mStrokeSelectColor = strokeselected;
         gradientDrawable.setShape(GradientDrawable.RECTANGLE);
         gradientDrawable.setColor(mButtonColor);
         gradientDrawable.setStroke(mStrokeWidth, mStrokeColor, 0, 0);
         gradientDrawable.setCornerRadius(mCornerRadius);
-        setButtonBackgroud();
+        setButtonBackground();
         setTextColor(textColor);
     }
 

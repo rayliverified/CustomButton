@@ -100,7 +100,7 @@
 
         <stream.custombutton.CustomButton
             android:id="@+id/btn3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
@@ -110,7 +110,7 @@
             android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:text="OK"
+            android:text="Normal"
             android:textSize="18sp"
             android:maxLines="1"
             android:singleLine="true"
@@ -127,7 +127,7 @@
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingTop="6dp"
+            android:paddingTop="2dp"
             android:paddingBottom="6dp"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
@@ -142,18 +142,17 @@
             android:ellipsize="none"
             app:btn_cornerRadius="20dp"
             app:btn_strokeWidth="1dp"
-            app:btn_buttonColor="@color/transparent"
-            app:btn_buttonSelectColor="@color/green"
+            app:btn_buttonColor="@color/green"
+            app:btn_buttonSelectColor="@color/green_light"
             app:btn_strokeColor="@color/green"
-            app:btn_textColor="@color/green"
-            app:btn_textSelectColor="@color/white"/>
-
+            app:btn_strokeSelectColor="@color/green_light"
+            app:btn_textColor="@color/white"/>
 
         <stream.custombutton.CustomButton
             android:id="@+id/btn5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingTop="6dp"
+            android:paddingTop="2dp"
             android:paddingBottom="6dp"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
@@ -168,10 +167,10 @@
             android:ellipsize="none"
             app:btn_cornerRadius="20dp"
             app:btn_strokeWidth="1dp"
-            app:btn_buttonColor="@color/transparent"
-            app:btn_buttonSelectColor="@color/red"
+            app:btn_buttonColor="@color/red"
+            app:btn_buttonSelectColor="@color/red_light"
             app:btn_strokeColor="@color/red"
-            app:btn_textColor="@color/red"
-            app:btn_textSelectColor="@color/white"/>
+            app:btn_strokeSelectColor="@color/red_light"
+            app:btn_textColor="@color/white"/>
     </LinearLayout>
 </FrameLayout>
