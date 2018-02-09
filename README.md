@@ -95,7 +95,7 @@ strokeselected - outline color when pressed.
 
 View the sample app for additional customization options.
 
-###Features Wishlist
+# Features Wishlist
 
 These features would make this library even more awesome. You can contribute to this library by developing any of the features below. Or, if you really want to see a feature developed, you can sponsor me to develop the feature.
 
@@ -115,7 +115,7 @@ Pull requests are most welcome!
 
 If you've fixed a bug or have a feature you've added, just create a pull request. If you've found a bug, file an issue. If you have any questions or would like to discuss upcoming features, please get in touch. You can get in touch with me in the Contact section below. 
 
-### ★ Acknowledgements ★
+# ★ Acknowledgements ★
 **♥ Developer ♥**
 
 Ray Li
@@ -124,7 +124,7 @@ Ray Li
 
 Ray Li
 
-### ★ Get in Touch ★
+# ★ Get in Touch ★
 <a href="mailto:ray.li.verified@gmail.com">
   <img alt="Ray Li Email"
        src="https://lh3.googleusercontent.com/yN_m90WN_HSCohXdgC2k91uSTk9dnYfoxTYwG_mv_l5_05dV2CzkQ1B6rEqH4uqdgjA=w96-rw" />
@@ -150,5 +150,5 @@ Ray Li
        src="https://lh3.googleusercontent.com/L15QqmKK7Vl-Ag1ZxaBqNQlXVEw58JT2BDb-ef5t2eboDh0pPSLjDgi3-aQ3Opdhhyk=w96-rw" />
 </a>
 
-####Search Terms
+#### Search Terms
 android button, outline button, button with outline, simple, elegant, iOS button, style, UI, beautiful, customizable button
