@@ -46,7 +46,8 @@
                     android:gravity="center"
                     android:text="Custom Button:"
                     android:textSize="24sp"
-                    android:textColor="@color/textPrimary"/>
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"/>
 
                 <stream.custombutton.CustomButton
                     android:id="@+id/btn1"
