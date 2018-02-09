@@ -119,6 +119,9 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         }
     }
 
+    /**
+     * @param isPress - set button appearance to selected/unselected state.
+     */
     public void setPressStatus(boolean isPress) {
         if (isPress) {
             setTextColor(textSelectColor);
@@ -132,25 +135,18 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         setButtonBackground();
     }
 
-
-    public void setButtonStatus(boolean isEnable) {
-        if (isEnable) {
-            setTextColor(textSelectColor);
-            gradientDrawable.setColor(mButtonSelectColor);
-            gradientDrawable.setStroke(mStrokeWidth, mStrokeSelectColor);
-        } else {
-            setTextColor(textColor);
-            gradientDrawable.setColor(mButtonColor);
-            gradientDrawable.setStroke(mStrokeWidth, mStrokeColor);
-        }
-
-        setButtonBackground();
-    }
-
+    /**
+     * @param imgResId - drawable ID.
+     */
     public void setDrawableLeft(int imgResId) {
         setDrawableLeft(imgResId, getLineHeight(), getLineHeight());
     }
 
+    /**
+     * @param imgResId - drawable ID.
+     * @param width - drawable width in px.
+     * @param height - drawable height in px.
+     */
     public void setDrawableLeft(int imgResId, int width, int height) {
         String originalText = mText;
         setText("");
@@ -165,10 +161,18 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         mText = originalText;
     }
 
+    /**
+     * @param imgResId - drawable ID.
+     */
     public void setDrawableRight(int imgResId) {
         setDrawableRight(imgResId, getLineHeight(), getLineHeight());
     }
 
+    /**
+     * @param imgResId - drawable ID.
+     * @param width - drawable width in px.
+     * @param height - drawable height in px.
+     */
     public void setDrawableRight(int imgResId, int width, int height) {
         SpannableString ss = new SpannableString("pics");
         Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
@@ -179,7 +183,14 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         append(ss);
     }
 
-
+    /**
+     * @param textnormal - text color.
+     * @param textselected - text color when pressed.
+     * @param buttonnormal - background color.
+     * @param buttonselected - background color when pressed.
+     * @param strokenormal - outline color.
+     * @param strokeselected - outline color when pressed.
+     */
     public void setColor(int textnormal, int textselected, int buttonnormal, int buttonselected, int strokenormal, int strokeselected) {
         textColor = textnormal;
         textSelectColor = textselected;
@@ -196,13 +207,11 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
     }
 
     /**
-     * 颜色加深处理
-     *
-     * @param RGBValues RGB的值，由alpha（透明度）、red（红）、green（绿）、blue（蓝）构成，
-     *                  Android中我们一般使用它的16进制，
-     *                  例如："#FFAABBCC",最左边到最右每两个字母就是代表alpha（透明度）、
-     *                  red（红）、green（绿）、blue（蓝）。每种颜色值占一个字节(8位)，值域0~255
-     *                  所以下面使用移位的方法可以得到每种颜色的值，然后每种颜色值减小一下，在合成RGB颜色，颜色就会看起来深一些了
+     * @param RGBValues The value of RGB is made up of alpha (transparency), red (red), green (green), blue (blue).
+     *                  In Android, RGB is usually represented as a hexadecimal.
+     *                  For example: "#FFAABBCC", from the left to the right, every two letters represent
+     *                  alpha (transparency), red, green, blue. Each color has a value of 0 to 255.
+     *                  Using the following shift method, we can get the darkened version of each color.
      * @return
      */
     private int colorBurn(int RGBValues) {
