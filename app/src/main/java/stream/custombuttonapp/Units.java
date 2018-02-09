@@ -34,16 +34,16 @@ public class Units {
         return px / scaledDensity;
     }
 
-    public static int getScreenWidth(Context context){
+    public static int getScreenWidth(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
-        WindowManager wm = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         wm.getDefaultDisplay().getMetrics(dm);
         return dm.widthPixels;
     }
 
-    public static int getScreenHeight(Context context){
+    public static int getScreenHeight(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
-        WindowManager wm = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         wm.getDefaultDisplay().getMetrics(dm);
         return dm.heightPixels;
     }

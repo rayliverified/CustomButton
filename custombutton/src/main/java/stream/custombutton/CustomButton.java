@@ -89,8 +89,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         setOnTouchListener(new OnButtonTouchListener());
     }
 
-    private void setText(String text)
-    {
+    private void setText(String text) {
         mText = text;
         super.setText(text);
     }
@@ -152,7 +151,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
         setDrawableLeft(imgResId, getLineHeight(), getLineHeight());
     }
 
-    public void setDrawableLeft(int imgResId, int width, int height){
+    public void setDrawableLeft(int imgResId, int width, int height) {
         String originalText = mText;
         setText("");
         SpannableString ss = new SpannableString("pics");
@@ -181,8 +180,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatTextView {
     }
 
 
-    public void setColor(int textnormal, int textselected, int buttonnormal, int buttonselected, int strokenormal, int strokeselected)
-    {
+    public void setColor(int textnormal, int textselected, int buttonnormal, int buttonselected, int strokenormal, int strokeselected) {
         textColor = textnormal;
         textSelectColor = textselected;
         mButtonColor = buttonnormal;
