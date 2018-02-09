@@ -5,6 +5,9 @@
     <color name="colorPrimaryLight">#4dafff</color>
     <color name="colorAccent">#cc3332</color>
 
+    <!-- Text Colors -->
+    <color name="textPrimary">#2D2D2D</color>
+
     <!-- Basic Colors -->
     <color name="white">#FFFFFF</color>
     <color name="white_pressed">#c8ffffff</color>
@@ -13,7 +16,7 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="loading">#40c4ff</color>
     <color name="green">#15CC87</color>
-    <color name="green_light">#1affa7</color>
+    <color name="green_light">#17e696</color>
     <color name="red">#FE5442</color>
     <color name="red_light">#ff6c5c</color>
     <color name="yellow">#FCD007</color>
