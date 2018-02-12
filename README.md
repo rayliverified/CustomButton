@@ -1,11 +1,11 @@
-[![GitHub release](https://img.shields.io/github/release/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub issues](https://img.shields.io/github/issues/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/badges/shields.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub top language](https://img.shields.io/github/languages/top/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton)
+[![GitHub release](https://img.shields.io/github/release/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub issues](https://img.shields.io/github/issues/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat-square)](https://github.com/searchy2/CustomButton) [![GitHub top language](https://img.shields.io/github/languages/top/searchy2/CustomButton.svg?style=flat-square)](https://github.com/searchy2/CustomButton)
 # Custom Button
 
 ![Screenshots](screenshots/Custom-Button-Cover_1280x.gif)
 
 Custom Button provides a beautiful and minimalistic button with outline and drawable support.
 
-This library is part of the Custom UI collection of beautiful, minimalistic, and customizable Android UI components.
+This library is part of the [Custom UI](http://rayliverified.com/index.php/code/) collection of beautiful, minimalistic, and customizable Android UI components.
 
 ![Screenshots](screenshots/Custom-Button-Screenshot_1280x.jpg)
 
@@ -118,11 +118,11 @@ If you've fixed a bug or have a feature you've added, just create a pull request
 # ★ Acknowledgements ★
 **♥ Developer ♥**
 
-Ray Li
+[Ray Li](https://rayliverified.com)
 
 **♥ Designer ♥**
 
-Ray Li
+[Ray Li](https://rayliverified.com)
 
 # ★ Get in Touch ★
 <a href="mailto:ray.li.verified@gmail.com">
@@ -149,6 +149,25 @@ Ray Li
   <img alt="Ray Li GitHub"
        src="https://lh3.googleusercontent.com/L15QqmKK7Vl-Ag1ZxaBqNQlXVEw58JT2BDb-ef5t2eboDh0pPSLjDgi3-aQ3Opdhhyk=w96-rw" />
 </a>
+
+# Apps Using This Library
+
+Want to be here? You can include yourself by making a `pull request`. 
+
+<table>
+    <tr>
+		<td><img src="https://lh3.googleusercontent.com/tYGJBG8mc7lwC0ZxQUxif2FVMFI8L8xRkPON0ytkWVPTI67ggkrgDl3JpRu9jW0W3sLJ=w64-rw"/></td>
+		<td><a href="https://github.com/searchy2/Rocket-Notes">Rocket Notes</a></td>
+	</tr>
+	<tr>
+		<td><img src="https://lh3.googleusercontent.com/R-vJInTblK1KBOqZaSDm_ac270QBHsiIcU9agHnN-rrp9K_lkN8rLzGIH8asCfkb420Q=w64-rw"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=io.ideastarter">Crowdfunding Community</a></td>
+	</tr>
+    <tr>
+		<td><img src="https://lh3.googleusercontent.com/CT1M2pKlUhGx4w5UHqarn6oSU_sa7L7XRW2-hQrfNi9oou6W81PbJnWi-9PbEfC_3g=w64-rw"/></td>
+		<td><a href="https://play.google.com/store/apps/details?id=com.blankicon">Blank Icon</a></td>
+	</tr>
+</table>
 
 #### Search Terms
 android button, outline button, button with outline, simple, elegant, iOS button, style, UI, beautiful, customizable button
