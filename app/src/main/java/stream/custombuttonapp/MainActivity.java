@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(onClickListener);
 
         CustomButton btn4 = findViewById(R.id.btn4);
-        btn4.setDrawableRight(R.drawable.icon_check_white);
+        btn4.setDrawableRight(R.drawable.icon_check_selector);
         btn4.setOnClickListener(onClickListener);
 
         int iconSize = (int) Units.spToPx(mContext, 22);
         CustomButton btn5 = findViewById(R.id.btn5);
-        btn5.setDrawableLeft(R.drawable.icon_close_white, iconSize, iconSize);
+        btn5.setDrawableLeft(R.drawable.icon_close_selector, iconSize, iconSize);
         btn5.setOnClickListener(onClickListener);
     }
 

@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
+
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -17,6 +19,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
+
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
 
     private String mText;
     private GradientDrawable gradientDrawable;
