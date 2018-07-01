@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -16,7 +16,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class CustomButton extends android.support.v7.widget.AppCompatTextView {
+public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
 
     private String mText;
     private GradientDrawable gradientDrawable;

@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "stream.custombuttonapp"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
@@ -22,5 +22,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':custombutton')
-    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0-alpha3'
 }
