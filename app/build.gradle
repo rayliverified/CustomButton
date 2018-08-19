@@ -22,5 +22,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':custombutton')
-    implementation 'androidx.cardview:cardview:1.0.0-alpha3'
+    implementation 'androidx.cardview:cardview:1.0.0-rc01'
 }

@@ -2,11 +2,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.searchy2'
-version = '1.8.0'
+version = '1.8.1'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 15
@@ -22,6 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'androidx.appcompat:appcompat:1.0.0-alpha3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0-rc01'
 }
