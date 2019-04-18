@@ -1,5 +1,6 @@
 package stream.custombutton;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -18,6 +19,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
 
     static {
@@ -109,6 +111,7 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
 
     private class OnButtonTouchListener implements OnTouchListener {
 
+        @SuppressLint("ClickableViewAccessibility")
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             switch (event.getAction()) {
@@ -158,6 +161,7 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
         setText("");
         SpannableString ss = new SpannableString("pics");
         Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
+        assert drawable != null;
         drawable.setBounds(0, 0, width, height);
         ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
         ss.setSpan(span, 0, ss.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -181,7 +185,8 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
      */
     public void setDrawableRight(int imgResId, int width, int height) {
         SpannableString ss = new SpannableString("pics");
-        Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
+            Drawable drawable = ContextCompat.getDrawable(mContext, imgResId);
+        assert drawable != null;
         drawable.setBounds(0, 0, width, height);
         ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
         ss.setSpan(span, 0, ss.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -218,7 +223,6 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
      *                  For example: "#FFAABBCC", from the left to the right, every two letters represent
      *                  alpha (transparency), red, green, blue. Each color has a value of 0 to 255.
      *                  Using the following shift method, we can get the darkened version of each color.
-     * @return
      */
     private int colorBurn(int RGBValues) {
         //int alpha = RGBValues >> 24;

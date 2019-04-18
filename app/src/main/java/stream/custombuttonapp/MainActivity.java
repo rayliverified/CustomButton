@@ -9,6 +9,7 @@ import android.view.View;
 
 import stream.custombutton.CustomButton;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity {
 
     private Context mContext;
