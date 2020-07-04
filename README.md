@@ -283,7 +283,7 @@ If you've fixed a bug or have a feature you've added, just create a pull request
 
 # Apps Using This Library
 
-Include your app here by making a `pull request`. 
+Add your app here by making a `pull request`. 
 
 <table>
     <tr>
@@ -300,5 +300,22 @@ Include your app here by making a `pull request`.
 	</tr>
 </table>
 
-#### Search Terms
+## Search Terms
 android button, outline button, button with outline, simple, elegant, iOS button, style, UI, beautiful, customizable button
+
+## License
+
+    BSD Zero Clause License
+
+    Copyright © 2020 Ray Li
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
