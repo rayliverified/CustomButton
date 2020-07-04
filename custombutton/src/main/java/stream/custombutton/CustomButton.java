@@ -218,11 +218,12 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatTextView {
     }
 
     /**
-     * @param RGBValues The value of RGB is made up of alpha (transparency), red (red), green (green), blue (blue).
+     * @param RGBValues Get the darkened version of each color.
+     *                  The value of RGB is made up of alpha (transparency), red (red), green (green), blue (blue).
      *                  In Android, RGB is usually represented as a hexadecimal.
      *                  For example: "#FFAABBCC", from the left to the right, every two letters represent
      *                  alpha (transparency), red, green, blue. Each color has a value of 0 to 255.
-     *                  Using the following shift method, we can get the darkened version of each color.
+     *                  This method shifts the color values and darkens the color.
      */
     private int colorBurn(int RGBValues) {
         //int alpha = RGBValues >> 24;
